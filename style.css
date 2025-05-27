@@ -1,0 +1,114 @@
+/* -------------------------
+  Basic Reset & Fonts
+--------------------------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #fbeffb; /* light pink lavender */
+  color: #5e405b; /* dark purple text */
+  margin: 0;
+  padding: 20px;
+  transition: background-color 0.5s ease, color 0.5s ease; /* smooth color changes */
+}
+
+/* -------------------------
+  Manifesto Box Styles
+--------------------------- */
+.manifesto-box {
+  background-color: #f3d9f7; /* soft lavender pink */
+  border-left: 6px solid #b388eb; /* purple highlight */
+  padding: 25px 30px;
+  max-width: 600px;
+  margin: 20px auto;
+  font-size: 18px;
+  line-height: 1.5;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(179, 136, 235, 0.4);
+  
+  max-height: 400px; /* limit height */
+  overflow-y: auto;  /* vertical scroll if content too tall */
+  padding-right: 20px; /* prevent scrollbar overlap */
+
+  /* Fade-in animation */
+  opacity: 0;             /* start hidden */
+  transform: translateY(20px); /* start slightly down */
+  animation: fadeInSoftly 1.5s ease forwards;
+}
+
+/* -------------------------
+  Fade-in Animation Keyframes
+--------------------------- */
+@keyframes fadeInSoftly {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* -------------------------
+  Toggle Button Styles
+--------------------------- */
+#toggleMode {
+  display: block;
+  margin: 0 auto 15px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #b388eb;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(179, 136, 235, 0.6);
+}
+
+#toggleMode:hover {
+  background-color: #9a63d6;
+}
+
+/* -------------------------
+  Dark Lavender Mode Styles
+--------------------------- */
+body.lavender-dark {
+  background-color: #4b3659; /* deep muted purple */
+  color: #e8d9f2; /* pale lavender text */
+}
+
+body.lavender-dark .manifesto-box {
+  background-color: #6e598e; /* darker purple box */
+  border-left-color: #c9a1d1; /* lighter purple accent */
+  box-shadow: 0 8px 20px rgba(120, 80, 150, 0.6);
+  color: #f1e6fa; /* very pale text */
+}
+
+body.lavender-dark #toggleMode {
+  background-color: #c9a1d1;
+  color: #4b3659;
+}
+
+body.lavender-dark #toggleMode:hover {
+  background-color: #a585bf;
+}
+
+/* -------------------------
+  Scrollbar Styles for Manifesto Box (Webkit)
+--------------------------- */
+.manifesto-box::-webkit-scrollbar {
+  width: 8px;
+}
+
+.manifesto-box::-webkit-scrollbar-thumb {
+  background-color: #b388eb;
+  border-radius: 10px;
+}
+
+.manifesto-box::-webkit-scrollbar-track {
+  background: transparent;
+}
