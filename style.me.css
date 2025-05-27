@@ -1,0 +1,22 @@
+body {
+  background-color: #fbeffb;
+  color: #4b2e2e;
+  font-family: "Georgia", serif;
+  padding: 40px;
+  margin: 0;
+}
+
+.container {
+  background-color: #fff8ff;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(222, 164, 205, 0.3);
+  text-align: center;
+}
+
+h1 {
+  color: #cc99cc;
+  font-size: 2.5em;
+}
